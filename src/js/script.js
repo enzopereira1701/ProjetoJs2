@@ -41,3 +41,9 @@ const preco_final = preco_produto * (1 - desconto);
 console.log(preco_final);
 // template strings - concatenação 
 console.log(`R${preco_final.tofixed(2)}`);
+
+// dDOM DOCUMENT OBJECT MODEL
+const titulo = document.getElementById("titulo")
+titulo.innerText = "O DOM mudou o texto"
+
+titulo.style.color="blue"
