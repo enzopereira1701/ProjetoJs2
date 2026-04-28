@@ -31,3 +31,13 @@ console.log(texto2)
 // join = junto tudo em uma string (unico texto)
 const texto3 = texto2.join(" ");
 console.log(texto3)
+
+// METODO TO FIXED 
+// define o n depois da virgula
+
+const preco_produto=199.99;
+const desconto = 0.15;
+const preco_final = preco_produto * (1 - desconto);
+console.log(preco_final);
+// template strings - concatenação 
+console.log(`R${preco_final.tofixed(2)}`);
