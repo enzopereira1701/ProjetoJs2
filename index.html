@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/js/script.js">
+    <link rel="stylesheet" href="./src/css/style.css"
     <title>Document</title>
 </head>
 <body>
@@ -14,12 +15,13 @@
     </header>
 
     <main class="container">
-        <div class="btns">
-            <button onclick="todosProdutos()"> Mostrar Todos(Map)</button>
+        <div class="btn">
+        <!-- botao  evento  função   -->
+            <button onclick="todosProdutos(produtos)"> Mostrar Todos(Map)</button>
             <button onclick="filtrarPromocoes()"> Apenas Promoções(Filter)</button>
-            <button onclick="CalcularTotal()"> Calcular Total (Reduce)</button>
+            <button onclick="calcularTotal()"> Calcular Total (Reduce)</button>
         </div> 
-        
+
         <div id="listar-produtos" class="produtos"></div>
         <div id="resultado-total"></div>
     </main>

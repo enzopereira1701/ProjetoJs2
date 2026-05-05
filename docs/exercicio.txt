@@ -1,0 +1,21 @@
+Exercício 1: O Dashboard do Instrutor (Filter + Map)
+
+Contexto: Você recebeu um array de objetos representando alunos. Cada objeto contém o nome, a nota final e a frequência (em porcentagem).
+
+Enunciado:
+Crie uma página HTML que contenha um botão chamado "Gerar Lista de Aprovados". Ao clicar no botão, o seu script deve:
+
+Filtrar apenas os alunos que possuem nota igual ou superior a 7 e frequência igual ou superior a 75%.
+
+Mapear esses alunos aprovados para criar uma lista de cards no HTML exibindo apenas o nome e uma mensagem de "Parabéns!".
+
+Exibir o resultado em uma div com o id lista-aprovados.
+
+Dados para teste:
+
+const alunos = [
+    { nome: "Ana", nota: 8.5, frequencia: 90 },
+    { nome: "Beto", nota: 5.0, frequencia: 80 },
+    { nome: "Carlos", nota: 9.0, frequencia: 60 },
+    { nome: "Daniela", nota: 7.5, frequencia: 85 }
+];

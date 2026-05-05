@@ -49,3 +49,42 @@ titulo.innerText = "O DOM mudou o texto";
 
 titulo.style.color="blue";
 
+/* CRIANDO O APP*/ 
+// a primeira coisa a fazer é o banco de dados
+
+const produtos = [
+    {nome: "Teclado mecânico", preco: 300, emPromocao:true},
+    {nome: "Mouse gamer", preco: 150, emPromocao:false},
+    {nome: "Monitor 144Hz", preco: 1300, emPromocao:true},
+    {nome: "MousePad XL", preco: 400, emPromocao:false},
+];
+
+const container =document.getElementById("listar-produtos")
+const mostrarTotal =document.getElementById("resultado-total")
+
+// map transforma o array de objetos em array de strings HTML e CSS
+function todosProdutos(lista){
+    mostrarTotal.innerText="";
+    const htmlProdutos =lista.map(item => `
+        <div class="card"> 
+            <h3> ${item.nome} </h3>
+            <p> Preço: R$ ${item.preco}</p>
+            ${item.emPromocao ? '<span class="tag">Promocão</span>':''}
+        </div>
+        `).join('');
+
+        container.innerHTML=htmlProdutos;
+}
+
+// /*filter  CRIA UMA NOVA LISTA APENAS com o que escolher 
+
+function filtrarPromocoes(){
+    const promocionais= produtos.filter(item =>item.emPromocao);
+    todosProdutos(promocionais);
+}
+
+function calcularTotal(){
+    const total = produtos.reduce((acumulador, item)=>{return acumulador + item.preco;
+    },0);
+    mostrarTotal.innerText= `Valor Total R$ ${total}`;
+}
