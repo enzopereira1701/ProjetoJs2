@@ -24,7 +24,7 @@ const titulo_artigo="Como aprender JAVA RAIZ"
 const texto1 = titulo_artigo.toLowerCase()
 console.log(texto1)
 
-// split = transforma o etxto em arrays 
+// split = transforma o etxto em arrays git 
 const texto2 = titulo_artigo.split(" ");
 console.log(texto2)
 
@@ -40,10 +40,12 @@ const desconto = 0.15;
 const preco_final = preco_produto * (1 - desconto);
 console.log(preco_final);
 // template strings - concatenação 
-console.log(`R${preco_final.tofixed(2)}`);
+console.log(`R${preco_final.toFixed(2)}`);
 
 // dDOM DOCUMENT OBJECT MODEL
 const titulo = document.getElementById("titulo")
-titulo.innerText = "O DOM mudou o texto"
 
-titulo.style.color="blue"
+titulo.innerText = "O DOM mudou o texto";
+
+titulo.style.color="blue";
+
